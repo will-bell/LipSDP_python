@@ -1,4 +1,13 @@
-# LipSDP
+# LipSDP - Python
+
+## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+
+## This is the original LipSDP repo converted to run purely in Python (i.e. no Matlab). Instead of `CVX`, this code uses `cvxpy`. All of the instructions given in the original README work the same with repo.
+
+## DISCLAIMER: I am not affiliated with the original LipSDP paper or repo
+
+## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+---
 
 This repository contains code for the Lipschitz constant estimation semidefinite programming framework introduced in [LipSDP](https://arxiv.org/abs/1906.04893) by Mahyar Fazlyab, Alexander Robey, Hamed Hassani, Manfred Morari, and George J. Pappas.  This work will appear as a conference paper at NeurIPS 2019.
 
