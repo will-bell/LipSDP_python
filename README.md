@@ -2,7 +2,7 @@
 
 ## !!!!!!!!!!!!!!!!!!!!
 
-## This is the original LipSDP repo converted to run purely in Python (i.e. no Matlab). Instead of `CVX`, this code uses `cvxpy`. All of the instructions given in the original README work the same with repo.
+## This is the original LipSDP repo converted to run purely in Python (i.e. no Matlab). Instead of `CVX`, this code uses `cvxpy`. All of the instructions given in the original README work the same with repo. Note that due to cvxpy's interface to Mosek, you may get Mosek "Out of space" errors running some of the examples in the README file. These errors seem to be resolved by using a different solver (e.g. change `MOSEK` to `CVXOPT` or something else).
 
 ## DISCLAIMER: I am not affiliated with the original LipSDP paper or repo
 
