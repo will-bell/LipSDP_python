@@ -188,7 +188,7 @@ def lipschitz_multi_layer(weights, mode, verbose, num_rand_neurons,
 
     obj = cp.Minimize(L_sq)
     prob = cp.Problem(obj, [(A_on_B.T @ Q @ A_on_B) - M << 0])
-    prob.solve(solver=cp.MOSEK, verbose=verbose)
+    prob.solve(solver=cp.CVXOPT, verbose=verbose)
 
     L = np.sqrt(prob.value)
 
