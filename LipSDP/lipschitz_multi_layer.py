@@ -4,9 +4,11 @@ import numpy as np
 import cvxpy as cp
 import scipy as sp
 from scipy.linalg import block_diag
+from error_messages import comb
 import mosek
 
 import error_messages
+
 
 def block_diag(arr_list):
     # create a block diagonal matrix from a list of cvxpy matrices
@@ -81,7 +83,7 @@ def lipschitz_multi_layer(weights, mode, verbose, num_rand_neurons,
     if mode == 'network':
         
         D = cp.Variable(shape=(N, 1), nonneg=True)
-        zeta = cp.Variable(shape=(math.comb(N, 2), 1), nonneg=True)
+        zeta = cp.Variable(shape=(comb(N, 2), 1), nonneg=True)
 
         T = cp.diag(D)
         C = np.array(list(itertools.combinations(range(0,N), 2)))
@@ -122,7 +124,7 @@ def lipschitz_multi_layer(weights, mode, verbose, num_rand_neurons,
         C = np.array(list(itertools.combinations(range(0,N), 2)))
         
         # space out decision variables in couplings
-        spacing = int(np.ceil(math.comb(N, 2) / num_dec_vars))
+        spacing = int(np.ceil(comb(N, 2) / num_dec_vars))
         C = C[0::spacing, :]
 
         zeta = cp.Variable(shape=(C.shape[0], 1), nonneg=True)
